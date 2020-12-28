@@ -27,4 +27,7 @@ describe 'scrabble_score' do
     expect(scrabble_score(%w[B C M P].sample)).to eq(3)
   end 
  
+  it 'returns correct values for random 4 score letter' do 
+    expect(scrabble_score(%w[F H V W Y].sample)).to eq(4)
+  end 
 end
