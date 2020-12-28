@@ -15,6 +15,7 @@ describe 'scrabble_score' do
     expect(scrabble_score('D')).to eq(2)
   end
 
+  # next scheme rather complicatet to debug, if we miss one letter
   it 'returns correct values for random 1 score letter' do 
     expect(scrabble_score(%w[A E I O U L N R S T].sample)).to eq(1)
   end 
@@ -29,5 +30,9 @@ describe 'scrabble_score' do
  
   it 'returns correct values for random 4 score letter' do 
     expect(scrabble_score(%w[F H V W Y].sample)).to eq(4)
+  end
+
+  it 'returns correct values for k' do 
+    expect(scrabble_score('K')).to eq(5)
   end 
 end
